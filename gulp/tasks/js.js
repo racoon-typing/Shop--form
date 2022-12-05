@@ -8,7 +8,6 @@ export const js = () => {
                 message: "Error: <% error.message %>"
             })
          ))
-
         .pipe(app.gulp.dest(app.path.build.js))
         .pipe(app.plugins.browsersync.stream());
 }
