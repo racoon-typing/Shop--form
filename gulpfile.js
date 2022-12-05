@@ -13,10 +13,9 @@ import { reset } from "./gulp/tasks/reset.js";
 import { html } from "./gulp/tasks/html.js";
 import { server } from "./gulp/tasks/server.js";
 import { styles } from './gulp/tasks/less.js';
-import { copy } from './gulp/tasks/copy.js';
+import { img } from './gulp/tasks/img.js';
 import { js } from './gulp/tasks/js.js';
 import { video } from './gulp/tasks/video.js';
-import { php } from './gulp/tasks/php.js';
 import { zip } from './gulp/tasks/zip.js';
 import { ftp } from './gulp/tasks/ftp.js';
 
@@ -26,9 +25,10 @@ function watcher() {
     gulp.watch(path.watch.html, html);
     gulp.watch(path.watch.less, styles);
     gulp.watch(path.watch.js, js);
+    gulp.watch(path.watch.img, img);
 }
 
-const mainTasks = gulp.parallel(copy, video, php, js, html, styles);
+const mainTasks = gulp.parallel(img, video, js, html, styles);
 
 // Сценарий выполнения
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));

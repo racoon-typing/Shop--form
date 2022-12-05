@@ -15,19 +15,19 @@ export const styles = () => {
         ))
         .pipe(app.plugins.replace(/@img\//g, '../img/'))
         .pipe(less())
-        .pipe(webpcss(
-            {
-                webpClass: ".webp",
-                noWebpClass: ".no-webp"
-            }
-        ))
+        // .pipe(webpcss(
+        //     {
+        //         webpClass: ".webp",
+        //         noWebpClass: ".no-webp"
+        //     }
+        // ))
         .pipe(autoprefixer({
             grid: true,
             overrideBrowserlist: ["last 3 version"],
             cascade: true
         }))
         // Не сжатый файл стилей
-        // .pipe(app.gulp.dest(app.path.build.css))
+        .pipe(app.gulp.dest(app.path.build.css))
         .pipe(cssmin())
         .pipe(rename({
             extname: '.min.css'

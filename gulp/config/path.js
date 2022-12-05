@@ -11,20 +11,19 @@ export const path = {
         img: `${buildFolder}/img/`,
         js: `${buildFolder}/`,
         video: `${buildFolder}/video`,
-        php: `${buildFolder}/`
-
     },
     src: {
         less: `${srcFolder}/less/style.less`,
         html: `${srcFolder}/*.html`,
-        img: `${srcFolder}/img/**/*.{jpg,jpeg,png,svg}`,
+        img: `${srcFolder}/img/**/*.{jpg,jpeg,png,webp}`,
+        svg: `${srcFolder}/img/**/*.svg`,
         js: `${srcFolder}/**/*.js`,
         video: `${srcFolder}/video/*.mp4`,
-        php: `${srcFolder}/*.php`
     },
     watch: {
         html: `${srcFolder}/*.html`,
         less: `${srcFolder}/**/*.less`,
+        img: `${srcFolder}/img/**/*.{jpg,jpeg,png,webp,svg}`,
         js: `${srcFolder}/js/*.js`
     },
     clean: buildFolder,
