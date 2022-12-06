@@ -309,7 +309,8 @@
 .contacts__social-link {
   display: grid;
   grid-template-columns: 100px 1fr;
-  column-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
   text-decoration: none;
   color: #ffffff;
 }
@@ -744,7 +745,8 @@
   text-align: center;
   margin: 0;
   margin-bottom: 20px;
-  margin-block-end: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
 }
 .gallery__title-wrapper {
   display: flex;
