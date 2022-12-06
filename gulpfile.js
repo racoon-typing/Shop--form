@@ -18,6 +18,7 @@ import { js } from './gulp/tasks/js.js';
 import { video } from './gulp/tasks/video.js';
 import { zip } from './gulp/tasks/zip.js';
 import { ftp } from './gulp/tasks/ftp.js';
+import { svgSprive } from './gulp/tasks/svgSprite.js';
 
 
 // Наблюдатель за изменениями в файлах
@@ -27,6 +28,8 @@ function watcher() {
     gulp.watch(path.watch.js, js);
     gulp.watch(path.watch.img, img);
 }
+
+export { svgSprive }
 
 const mainTasks = gulp.parallel(img, video, js, html, styles);
 

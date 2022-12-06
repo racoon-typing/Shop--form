@@ -5,6 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "svgSprive": "gulp svgSprive",
     "dev": "gulp",
     "zip": "gulp deployZIP",
     "deploy": "gulp deployFTP"
@@ -35,6 +36,7 @@
     "gulp-notify": "^4.0.0",
     "gulp-plumber": "^1.2.1",
     "gulp-replace": "^1.1.3",
+    "gulp-svg-sprite": "^2.0.1",
     "gulp-util": "^3.0.8",
     "gulp-version-number": "^0.2.4",
     "gulp-webp": "^4.0.1",
