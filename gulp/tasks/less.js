@@ -6,7 +6,7 @@ import webpcss from 'gulp-webpcss'; // Выводит WEBP изображени�
 import rename from "gulp-rename";
 
 export const styles = () => {
-    return app.gulp.src(app.path.src.less, { sourcemaps: true })
+    return app.gulp.src(app.path.src.less, { sourcemaps: app.isBuild })
         .pipe(app.plugins.plumber(
             app.plugins.notify.onError({
                 title: "LESS",
@@ -21,14 +21,24 @@ export const styles = () => {
         //         noWebpClass: ".no-webp"
         //     }
         // ))
-        .pipe(autoprefixer({
-            grid: true,
-            overrideBrowserlist: ["last 3 version"],
-            cascade: true
-        }))
+        .pipe(
+            app.plugins.if(
+                app.isBuild,
+                autoprefixer({
+                    grid: true,
+                    overrideBrowserlist: ["last 3 version"],
+                    cascade: true
+                })
+            )
+        )
         // Не сжатый файл стилей
         .pipe(app.gulp.dest(app.path.build.css))
-        .pipe(cssmin())
+        .pipe(
+            app.plugins.if(
+                app.isBuild,
+                cssmin()
+            )
+        )
         .pipe(rename({
             extname: '.min.css'
         }))

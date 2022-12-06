@@ -3,6 +3,8 @@ import { path } from "./gulp/config/path.js";
 import { plugins } from "./gulp/config/plugins.js";
 
 global.app = {
+    isBuild: process.argv.includes('--build'),
+    isDev: !process.argv.includes('--build'),
     path: path,
     gulp: gulp,
     plugins: plugins
@@ -35,11 +37,13 @@ const mainTasks = gulp.parallel(img, video, js, html, styles);
 
 // Сценарий выполнения
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
+const build = gulp.series(reset, mainTasks);
 const deployZIP = gulp.series(reset, mainTasks, zip); 
 const deployFTP = gulp.series(reset, mainTasks, ftp); 
 
 // Экспорт сценариев
 export { dev }
+export { build }
 export { deployZIP }
 
 // Логин:
