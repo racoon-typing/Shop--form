@@ -2,4 +2,33 @@
     position: relative;
     width: 100%;
     flex-grow: 1;
+
+    &__wrapper {
+        max-width: 500px;
+        padding: 24px 16px;
+    }
+
+    &__title {
+        margin: 0;
+        font-size: 28px;
+        line-height: 30px;
+        font-weight: 400;
+        margin-bottom: 10px;
+
+        &-wrapper {
+            margin-bottom: 32px;
+        }
+    }
+
+    &__subtitle {
+        margin: 0;
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: 400;
+        color: @color-third;
+
+        &--second {
+            color: @color-second;
+        }
+    }
 }
