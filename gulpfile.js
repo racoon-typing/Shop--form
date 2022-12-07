@@ -33,7 +33,7 @@ function watcher() {
 
 export { svgSprive }
 
-const mainTasks = gulp.parallel(img, video, js, html, styles);
+const mainTasks = gulp.parallel(img, video, js, html, styles, svgSprive);
 
 // Сценарий выполнения
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
