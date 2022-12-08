@@ -24,6 +24,7 @@
 
         // }
 
+        // Цифры
         &-num {
             margin-bottom: 16px;
 
@@ -32,8 +33,31 @@
                 margin: 0;
                 list-style-type: none;
             }
+
+            &-subitem {
+                display: flex;
+
+                &-text {
+                    margin: 0;
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 15px;
+                    color: @color-grey1;
+                    margin-right: 5px;
+
+                    &--second {
+                        margin: 0;
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 15px;
+                        color: @color-second;
+                    }
+                }
+            }
+
         }
 
+        // Размер
         &-size {
             margin-bottom: 16px;
 
@@ -104,12 +128,12 @@
                     }
 
                     &--current {
-                        background-color: #444444; 
+                        background-color: #444444;
 
                         & span {
                             outline: 2px solid #ffffff;
-                            outline-offset: -1px; 
-                        } 
+                            outline-offset: -1px;
+                        }
                     }
                 }
 
@@ -130,6 +154,45 @@
         // Цена
         &-price {
             display: flex;
+
+            &-columnLeft {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                &-num {
+                    margin: 0;
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 21px;
+
+                    &-crossed {
+                        margin: 0;
+                        color: @color-grey1;
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 15px;
+                    }
+                }
+            }
+
+            &-columnCenter {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                box-sizing: border-box;
+                width: 146px;
+                height: 42px;
+                display: flex;
+                margin: 0 8px;
+                padding: 0 10px;
+                background-color: @color-grey3;
+                border-radius: 5px;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 21px;
+                color: @color-second;
+            }
         }
     }
 }
