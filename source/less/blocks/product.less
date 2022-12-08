@@ -25,6 +25,8 @@
         // }
 
         &-num {
+            margin-bottom: 16px;
+
             &-sublist {
                 padding: 0;
                 margin: 0;
@@ -32,5 +34,102 @@
             }
         }
 
+        &-size {
+            margin-bottom: 16px;
+
+            &-sublist {
+                display: flex;
+                padding: 0;
+                margin: 0;
+                list-style-type: none;
+            }
+
+            &-subitem {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 30px;
+                height: 30px;
+                margin-right: 9px;
+                background-color: @color-grey3;
+                border-radius: 6px;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 15px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                &--current {
+                    background-color: @color-second;
+                    color: @color-main;
+                }
+            }
+        }
+
+        // Цвет
+        &-color {
+            margin-bottom: 16px;
+
+            &-list {
+                display: flex;
+                padding: 0;
+                margin: 0;
+                list-style-type: none;
+            }
+
+            &-item {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                width: 20px;
+                height: 20px;
+                margin-right: 16px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                & span {
+                    border-radius: 50%;
+                    width: 16px;
+                    height: 16px;
+                }
+
+                &-1 {
+                    & span {
+                        background-color: #444444;
+                    }
+
+                    &--current {
+                        background-color: #444444; 
+
+                        & span {
+                            outline: 2px solid #ffffff;
+                            outline-offset: -1px; 
+                        } 
+                    }
+                }
+
+                &-2 {
+                    & span {
+                        background-color: #106DA2;
+                    }
+                }
+
+                &-3 {
+                    & span {
+                        background-color: #AE6D0C;
+                    }
+                }
+            }
+        }
+
+        // Цена
+        &-price {
+            display: flex;
+        }
     }
 }
