@@ -364,17 +364,39 @@
 
                     <div class="form__contacts-wrapper">
                         <!-- Поля ввода -->
-                        <!-- Имя -->
-                        <input class="form__input form__input-name" type="text" placeholder="Имя" value="Александр">
-                        <!-- Фамилия -->
-                        <input class="form__input form__input-surname" type="text" placeholder="Фамилия">
-                        <!-- Телефон -->
-                        <input class="form__input form__input-tel" type="tel" placeholder="Телефон">
-                        <!-- Почта -->
-                        <input class="form__input form__input-email" type="email" placeholder="Email">
-                        <!-- Адрес -->
-                        <input class="form__input form__input-email" type="text" placeholder="Адрес"
-                            value="г. Санкт-Петербург, пр. Просвещения, д. 99, кв. 152">
+                        <ul class="form__contacts-list">
+                            <!-- 1 -->
+                            <li class="form__contacts-item form__contacts-item--1">
+                                <!-- Имя -->
+                                <input class="form__input form__input-name" type="text" placeholder="Имя"
+                                    value="Александр">
+                            </li>
+
+                            <!-- 2 -->
+                            <li class="form__contacts-item form__contacts-item--2">
+                                <!-- Фамилия -->
+                                <input class="form__input form__input-surname" type="text" placeholder="Фамилия">
+                            </li>
+
+                            <!-- 3 -->
+                            <li class="form__contacts-item form__contacts-item--3">
+                                <!-- Телефон -->
+                                <input class="form__input form__input-tel" type="tel" placeholder="Телефон">
+                            </li>
+
+                            <!-- 4 -->
+                            <li class="form__contacts-item form__contacts-item--4">
+                                <!-- Почта -->
+                                <input class="form__input form__input-email" type="email" placeholder="Email">
+                            </li>
+
+                            <!-- 5 -->
+                            <li class="form__contacts-item form__contacts-item--5">
+                                <!-- Адрес -->
+                                <input class="form__input form__input-address" type="text" placeholder="Адрес"
+                                    value="г. Санкт-Петербург, пр. Просвещения, д. 99, кв. 152">
+                            </li>
+                        </ul>
 
                         <iframe src="" frameborder="0">
                             Карта
@@ -387,21 +409,31 @@
                             Оплата
                         </h3>
 
-                        <!-- 1 -->
-                        <input type="radio" id="cash" name="pay" value="cash">
-                        <label for="cash">
-                            Наличными курьеру
-                        </label>
-                        <!-- 2 -->
-                        <input type="radio" id="card" name="pay" value="cash">
-                        <label for="card">
-                            Картой курьеру
-                        </label>
-                        <!-- 3 -->
-                        <input type="radio" id="online" name="pay" value="cash">
-                        <label for="online">
-                            Картой онлайн
-                        </label>
+                        <ul class="form__pay-list">
+                            <!-- 1 -->
+                            <li class="form__pay-item">
+                                <input class="form__pay-item-radio" type="radio" id="cash" name="pay" value="cash" checked>
+                                <label class="form__pay-item-label" for="cash">
+                                    Наличными курьеру
+                                </label>
+                            </li>
+
+                            <!-- 2 -->
+                            <li class="form__pay-item">
+                                <input class="form__pay-item-radio" type="radio" id="card" name="pay" value="cash">
+                                <label class="form__pay-item-label" for="card">
+                                    Картой курьеру
+                                </label>
+                            </li>
+
+                            <!-- 3 -->
+                            <li class="form__pay-item">
+                                <input class="form__pay-item-radio" type="radio" id="online" name="pay" value="cash">
+                                <label class="form__pay-item-label" for="online">
+                                    Картой онлайн
+                                </label>
+                            </li>
+                        </ul>
                     </div>
 
                     <!-- Комментарий -->
@@ -487,7 +519,7 @@
                                 <h2 class="form__calculate-delivery-title">
                                     Получить товар со склада
                                 </h2>
-    
+
                                 <input type="checkbox" role="switch">
                             </div>
 
