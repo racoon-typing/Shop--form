@@ -15,18 +15,74 @@
 
     <header class="main-header">
         <div class="main-header__wrapper">
-            <svg class="main-header__logo" width="100" height="22">
-                <use xlink:href="../img/icons/icons.svg#logo"></use>
-            </svg>
+            <div class="main-header__wrapper-content">
+                <nav class="main-header__nav">
+                    <ul class="main-header__nav-list">
+                        <!-- 1 -->
+                        <li class="main-header__nav-item">
+                            <a href="#" class="main-header__nav-item-link">
+                                Каталог
+                            </a>
+                        </li>
+
+                        <!-- 2 -->
+                        <li class="main-header__nav-item">
+                            <a href="#" class="main-header__nav-item-link">
+                                О компании
+                            </a>
+                        </li>
+
+                        <!-- 3 -->
+                        <li class="main-header__nav-item">
+                            <a href="#" class="main-header__nav-item-link">
+                                Магазины
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <svg class="main-header__logo" width="100" height="22">
+                    <use xlink:href="../img/icons/icons.svg#logo"></use>
+                </svg>
+            </div>
 
             <div class="main-header__column-right">
-                <svg class="main-header__bag" width="28" height="28">
-                    <use xlink:href="../img/icons/icons.svg#bag"></use>
-                </svg>
+                <ul class="main-header__column-right-list">
+                    <!-- 1 -->
+                    <li class="main-header__column-right-item main-header__column-right-item--1">
+                        <svg class="main-header__search" width="20" height="20">
+                            <use xlink:href="../img/icons/icons.svg#search"></use>
+                        </svg>
+                    </li>
 
-                <svg class="main-header__burger" width="32" height="32">
-                    <use xlink:href="../img/icons/icons.svg#burger"></use>
-                </svg>
+                    <!-- 2 -->
+                    <li class="main-header__column-right-item main-header__column-right-item--2">
+                        <svg class="main-header__human" width="20" height="20">
+                            <use xlink:href="../img/icons/icons.svg#human"></use>
+                        </svg>
+                    </li>
+
+                    <!-- 3 -->
+                    <li class="main-header__column-right-item main-header__column-right-item--3">
+                        <svg class="main-header__like" width="20" height="20">
+                            <use xlink:href="../img/icons/icons.svg#like"></use>
+                        </svg>
+                    </li>
+
+                    <!-- 4 -->
+                    <li class="main-header__column-right-item main-header__column-right-item--4">
+                        <svg class="main-header__bag main-header__bag--mobile" width="28" height="28">
+                            <use xlink:href="../img/icons/icons.svg#bag"></use>
+                        </svg>
+                    </li>
+
+                    <!-- 5 -->
+                    <li class="main-header__column-right-item main-header__column-right-item--5">
+                        <svg class="main-header__burger main-header__burger--mobile" width="32" height="32">
+                            <use xlink:href="../img/icons/icons.svg#burger"></use>
+                        </svg>
+                    </li>
+                </ul>
             </div>
         </div>
     </header>
@@ -70,26 +126,24 @@
                         Войти
                     </span>
                 </h2>
-
-                <h2 class="main-container__output-price">
-                    3 товара на <br>
-                    сумму 25 000 ₽
-                </h2>
             </div>
 
 
             <section class="product">
+                <h2 class="product__output-price">
+                    3 товара на <br>
+                    сумму 25 000 ₽
+                </h2>
+
                 <ul class="product__list">
                     <!-- 1 -->
                     <li class="product__item">
-                        <div class="product__item-photo-wrapper">
-                            <img class="product__item-photo" src="@img/content-photo/content-1.jpg" alt="" width="90"
-                                height="111">
+                        <img class="product__item-photo" src="@img/content-photo/content-1.jpg" alt="" width="90"
+                            height="111">
 
-                            <h3 class="product__item-title">
-                                Утепленная стеганная куртка женская Top Hills
-                            </h3>
-                        </div>
+                        <h3 class="product__item-title">
+                            Утепленная стеганная куртка женская Top Hills
+                        </h3>
 
                         <div class="product__item-characteristics">
                             <div class="product__item-num">
@@ -230,14 +284,12 @@
 
                     <!-- 3 -->
                     <li class="product__item">
-                        <div class="product__item-photo-wrapper">
-                            <img class="product__item-photo" src="@img/content-photo/content-1.jpg" alt="" width="90"
-                                height="111">
+                        <img class="product__item-photo" src="@img/content-photo/content-1.jpg" alt="" width="90"
+                            height="111">
 
-                            <h3 class="product__item-title">
-                                Утепленная стеганная куртка женская Top Hills
-                            </h3>
-                        </div>
+                        <h3 class="product__item-title">
+                            Утепленная стеганная куртка женская Top Hills
+                        </h3>
 
                         <div class="product__item-characteristics">
                             <div class="product__item-num">
@@ -396,9 +448,9 @@
                                 <input class="form__input form__input-address" type="text" placeholder="Адрес"
                                     value="г. Санкт-Петербург, пр. Просвещения, д. 99, кв. 152">
 
-                                    <svg class="form__input-search" width="16" height="16">
-                                        <use xlink:href="../img/icons/icons.svg#search"></use>
-                                    </svg>
+                                <svg class="form__input-search" width="16" height="16">
+                                    <use xlink:href="../img/icons/icons.svg#search"></use>
+                                </svg>
                             </li>
                         </ul>
 
@@ -416,7 +468,8 @@
                         <ul class="form__pay-list">
                             <!-- 1 -->
                             <li class="form__pay-item">
-                                <input class="form__pay-item-radio" type="radio" id="cash" name="pay" value="cash" checked>
+                                <input class="form__pay-item-radio" type="radio" id="cash" name="pay" value="cash"
+                                    checked>
                                 <label class="form__pay-item-label" for="cash">
                                     Наличными курьеру
                                 </label>
@@ -473,7 +526,8 @@
                                     Скидка
                                 </p>
 
-                                <p class="form__calculate-item-text form__calculate-item-price form__calculate-item-price--second">
+                                <p
+                                    class="form__calculate-item-text form__calculate-item-price form__calculate-item-price--second">
                                     - 4 500 ₽
                                 </p>
 
@@ -523,7 +577,7 @@
                                 </h2>
 
                                 <label class="form__calculate-switch">
-                                    <input type="checkbox" >
+                                    <input type="checkbox">
                                     <span class="form__calculate-switch-slider form__calculate-switch-round"></span>
                                 </label>
                             </div>

@@ -28,17 +28,36 @@
         line-height: 18px;
         font-weight: 400;
         color: @color-grey1;
-        margin-bottom: 32px;
 
         &--second {
             color: @color-second;
         }
     }
+}
 
-    &__output-price {
-        margin: 0;
-        font-weight: 400;
-        font-size: 24px;
-        line-height: 30px;
+@media (min-width: 1200px) {
+    .main-container {
+        &__wrapper {
+            position: relative;
+            display: grid;
+            grid-template-columns: 800px 1fr;
+            max-width: 1200px;
+            padding: 0;
+            padding-top: 50px;
+        }
+
+        &__title {
+            margin-bottom: 0;
+            margin-right: 20px;
+            font-size: 40px;
+            line-height: 42px;
+            
+            &-wrapper {
+                grid-column: 1 / 2;
+                display: flex;
+                align-items: flex-end;
+                padding-bottom: 60px;
+            }
+        }
     }
 }
