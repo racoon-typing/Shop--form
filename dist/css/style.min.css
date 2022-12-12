@@ -194,6 +194,7 @@
     max-width: 1200px;
     padding: 0;
     padding-top: 50px;
+    padding-bottom: 73px;
   }
   .main-container__title {
     margin-bottom: 0;
@@ -616,10 +617,14 @@
   width: 16px;
   height: 16px;
 }
+.form__contacts-map {
+  width: 100%;
+  height: 220px;
+}
 .form__input {
   display: block;
   box-sizing: border-box;
-  padding: 12px 16px;
+  padding: 11px 16px;
   width: 100%;
   min-height: 45px;
   font-weight: 400;
@@ -776,6 +781,7 @@
 .form__calculate-subitem {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin-bottom: 8px;
 }
 .form__calculate-subitem-smalltext {
   font-weight: 400;
@@ -915,10 +921,78 @@
     grid-column: 1 / 2;
     padding-right: 40px;
   }
+  .form__title {
+    font-size: 28px;
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
   .form__calculate-wrapper {
     width: 400px;
     position: absolute;
     top: 50px;
     right: 0;
+  }
+  .form__contacts-list {
+    display: grid;
+    grid-template-columns: 370px 370px;
+    gap: 20px;
+    margin-bottom: 0;
+  }
+  .form__contacts-item {
+    margin-bottom: 0;
+  }
+  .form__contacts-item--5 {
+    grid-column: 1 / 3;
+  }
+  .form__contacts-item--5 input {
+    min-height: 51px;
+    font-size: 16px;
+    line-height: 21px;
+    padding: 15px 50px 15px 20px;
+  }
+  .form__contacts-map {
+    position: absolute;
+    top: 761px;
+    right: 0;
+    width: 400px;
+    height: 450px;
+  }
+  .form__input {
+    padding: 14px 20px;
+  }
+  .form__input-search {
+    width: 20px;
+    height: 20px;
+    top: 17px;
+    right: 24px;
+  }
+  .form__comment-wrapper {
+    margin-bottom: 0;
+  }
+  .form__comment-title {
+    font-size: 28px;
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
+  .form__comment-textarea {
+    min-height: 141px;
+    padding: 15px 20px;
+  }
+  .form__comment-description {
+    padding-left: 20px;
+  }
+  .form__calculate-wrapper {
+    padding: 30px 20px;
+  }
+  .form__calculate-item {
+    margin-bottom: 20px;
+  }
+  .form__calculate-item-text {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .form__calculate-item-subitem-smalltext {
+    font-size: 16px;
+    line-height: 21px;
   }
 }
