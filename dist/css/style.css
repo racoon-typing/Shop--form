@@ -829,6 +829,7 @@
   margin-right: 5px;
 }
 .form__calculate-price-number {
+  font-weight: 700;
   margin: 0;
 }
 .form__calculate-promoCode {
@@ -984,6 +985,9 @@
   .form__calculate-wrapper {
     padding: 30px 20px;
   }
+  .form__calculate-list {
+    margin-bottom: 20px;
+  }
   .form__calculate-item {
     margin-bottom: 20px;
   }
@@ -991,8 +995,43 @@
     font-size: 20px;
     line-height: 24px;
   }
-  .form__calculate-item-subitem-smalltext {
+  .form__calculate-subitem:last-child {
+    margin-bottom: 0;
+  }
+  .form__calculate-subitem-smalltext {
     font-size: 16px;
     line-height: 21px;
+  }
+  .form__calculate-subitem-smalltext--second {
+    font-size: 16px;
+    line-height: 21px;
+  }
+  .form__calculate-delivery {
+    padding: 20px 0;
+  }
+  .form__calculate-delivery-wrapper {
+    display: flex;
+    min-height: 31px;
+    align-items: center;
+  }
+  .form__calculate-delivery-title {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .form__calculate-price {
+    padding: 20px 0;
+  }
+  .form__calculate-price-title {
+    font-size: 28px;
+    line-height: 30px;
+  }
+  .form__calculate-price-number {
+    font-size: 28px;
+    line-height: 30px;
+  }
+  .form__calculate-promoCode-input {
+    font-size: 16px;
+    line-height: 21px;
+    padding: 12px 16px;
   }
 }
