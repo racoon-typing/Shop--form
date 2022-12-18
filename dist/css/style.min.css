@@ -209,9 +209,13 @@
     padding-bottom: 60px;
   }
 }
-.main-container {
+.main-footer {
   width: 100%;
   flex-shrink: 0;
+}
+.main-footer__wrapper {
+  max-width: 500px;
+  padding: 24px 16px;
 }
 .breadcrumbs {
   margin-bottom: 32px;
