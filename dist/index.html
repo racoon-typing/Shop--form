@@ -633,13 +633,22 @@
                         на наши новости
                     </h3>
 
-                    <label class="main-footer__form-label">
-                        <input class="main-footer__form-input" type="text" placeholder="example@mail.ru">
-                    </label>
+                    <div class="main-footer__form-label-wrapper">
+                        <label class="main-footer__form-label">
+                            <input class="main-footer__form-input" type="text" placeholder="example@mail.ru">
+                        </label>
+    
+                        <div class="main-footer__form-button-wrapper">
+                            <svg class="main-footer__form-button-icon" width="17" height="17">
+                                <use xlink:href="../img/icons/icons.svg#search"></use>
+                            </svg>
+        
+                            <button class="main-footer__form-button">
+                                Подписаться
+                            </button>
+                        </div>
+                    </div>
 
-                    <button class="main-footer__form-button">
-                        Подписаться
-                    </button>
 
                     <p class="main-footer__form-description">
                         Нажимая кнопку “Подписаться”, Вы соглашаетесь с политикой конфиденциальности
@@ -726,6 +735,10 @@
                     <p class="main-footer__politics-text">
                         Сделано в студии 
                     </p>
+
+                    <svg class="main-footer__politics-label-icon" width="21" height="21">
+                        <use xlink:href="../img/icons/icons.svg#5-star"></use>
+                    </svg>
 
                     <p class="main-footer__politics-text main-footer__politics-text--second">
                         5 УГЛОВ
