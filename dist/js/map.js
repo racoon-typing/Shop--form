@@ -5,6 +5,7 @@ let valueAdress;
 // Широта и долгота мест в списке
 let arrGeo = [];
 
+// Функция получения подходящих адресов (запрос на сервер)
 function mapAdress() {
     var url = "https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/address";
     var token = "0c6c9bedcb4d254c0775dbb3bbdf6371d4efe598";
@@ -72,12 +73,54 @@ function mapAdress() {
         .catch(error => console.log("error", error));
 }
 
+// Функция подбора адреса
 function updateValue(e) {
     valueAdress = e.target.value;
     mapAdress();
 }
 
+// Слушатель на ввод букв для обновления списка адресов
 adressInput.addEventListener('input', updateValue);
+
+
+// Яндекс.Карты
+let geoLon = 37.64;
+let geoLat = 55.76;
+
+var myMap;
+
+// Дождёмся загрузки API и готовности DOM.
+ymaps.ready(init);
+
+function init() {
+    // Создание экземпляра карты и его привязка к контейнеру с
+    // заданным id ("map").
+    myMap = new ymaps.Map('map', {
+        // При инициализации карты обязательно нужно указать
+        // её центр и коэффициент масштабирования.
+        center: [geoLat, geoLon], // Москва
+        zoom: 10
+    });
+
+    myGeoObject = new ymaps.GeoObject(
+        {
+            // Описание геометрии.
+            geometry: {
+                type: "Point",
+                coordinates: [geoLat, geoLon]
+            }
+        },
+        { // Опции.
+            // Иконка метки будет растягиваться под размер ее содержимого.
+            preset: 'islands#redIcon',
+            // Метку можно перемещать.
+            draggable: true
+        },
+    );
+
+    myMap.geoObjects
+        .add(myGeoObject)
+}
 
 
 // Вставляет адрес в инпут
@@ -93,50 +136,46 @@ function toggleDone(event) {
     let liIdDown = event.target.id;
     let numLon = liIdDown * 2;
     let numLat = liIdDown * 2 + 1;
-    console.log(liIdDown);
-    console.log(arrGeo);
-    let geoLon = arrGeo[numLon];
-    let geoLat = arrGeo[numLat];
-    console.log(geoLon);
-    console.log(geoLat);
+    geoLon = arrGeo[numLon];
+    geoLat = arrGeo[numLat];
+
+    // Удаляет дефолтную карту
+    myMap.destroy();
+
+    // Создает карту по заданному адресу
+    ymaps.ready(init);
+
+    function init() {
+        // Создание экземпляра карты и его привязка к контейнеру с
+        // заданным id ("map").
+        myMap = new ymaps.Map('map', {
+            // При инициализации карты обязательно нужно указать
+            // её центр и коэффициент масштабирования.
+            center: [geoLat, geoLon], // Москва
+            zoom: 10
+        });
+
+        myGeoObject = new ymaps.GeoObject(
+            {
+                // Описание геометрии.
+                geometry: {
+                    type: "Point",
+                    coordinates: [geoLat, geoLon]
+                }
+            },
+            { // Опции.
+                // Иконка метки будет растягиваться под размер ее содержимого.
+                preset: 'islands#redIcon',
+                // Метку можно перемещать.
+                draggable: true
+            },
+        );
+
+        myMap.geoObjects
+            .add(myGeoObject)
+    }
 }
 
 outputAdressItems.addEventListener('click', toggleDone)
 
 
-
-// Яндекс.Карты
-var myMap;
-
-// Дождёмся загрузки API и готовности DOM.
-ymaps.ready(init);
-
-function init() {
-    // Создание экземпляра карты и его привязка к контейнеру с
-    // заданным id ("map").
-    myMap = new ymaps.Map('map', {
-        // При инициализации карты обязательно нужно указать
-        // её центр и коэффициент масштабирования.
-        center: [55.76, 37.64], // Москва
-        zoom: 10
-    });
-
-    myGeoObject = new ymaps.GeoObject(
-        {
-            // Описание геометрии.
-            geometry: {
-                type: "Point",
-                coordinates: [55.76, 37.64]
-            }
-        },
-        { // Опции.
-            // Иконка метки будет растягиваться под размер ее содержимого.
-            preset: 'islands#redIcon',
-            // Метку можно перемещать.
-            draggable: true
-        },
-    );
-
-    myMap.geoObjects
-        .add(myGeoObject)
-}
