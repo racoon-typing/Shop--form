@@ -79,7 +79,6 @@ function updateValue(e) {
 
 adressInput.addEventListener('input', updateValue);
 
-let liIdDown;
 
 // Вставляет адрес в инпут
 const outputAdressItems = document.querySelector('.form__contacts-sublist');
@@ -90,15 +89,16 @@ function toggleDone(event) {
     adressNode.value = liValue;
     outputAdressItems.style.display = 'none';
 
-    // Вставить координаты в карту
-    liIdDown = event.target.id;
+    // Получаем координаты места из списка 
+    let liIdDown = event.target.id;
+    let numLon = liIdDown * 2;
+    let numLat = liIdDown * 2 + 1;
     console.log(liIdDown);
     console.log(arrGeo);
-    let geoLon = arrGeo[liIdDown];
-    let geoLat = arrGeo[liIdDown + 1];
+    let geoLon = arrGeo[numLon];
+    let geoLat = arrGeo[numLat];
     console.log(geoLon);
     console.log(geoLat);
-
 }
 
 outputAdressItems.addEventListener('click', toggleDone)
