@@ -1,9 +1,9 @@
 // DAData
 let adressInput = document.querySelector('.form__input-address');
-adressInput.addEventListener('input', updateValue);
 let valueAdress;
 
-let myCoordinates = [];
+// Широта и долгота мест в списке
+let arrGeo = [];
 
 function mapAdress() {
     var url = "https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/address";
@@ -28,7 +28,7 @@ function mapAdress() {
     fetch(url, options)
         .then(response => response.json())
         .then(result => {
-            myCoordinates = [];
+            arrGeo = [];
 
             // Список для вывода адресов
             const outputAdressList = document.querySelector('.form__contacts-sublist');
@@ -46,9 +46,6 @@ function mapAdress() {
                 return
             }
 
-            // Получаем широту и долготу
-            let arrGeo = [];
-
             // Вставляет адреса в список
             const fragment = document.createDocumentFragment();
             for (let i = 0; i < resultListLength; i++) {
@@ -57,44 +54,56 @@ function mapAdress() {
 
                     const li = document.createElement('li');
                     li.classList.add('form__contacts-subitem');
+                    li.id = `${i}`;
                     let resultListValue = result.suggestions[i].unrestricted_value;
-                    
 
+                    // Вставляем координаты в массив
                     let resultListLon = result.suggestions[i].data.geo_lon;
                     let resultListLat = result.suggestions[i].data.geo_lat;
                     arrGeo.push(resultListLon);
                     arrGeo.push(resultListLat);
-                    myCoordinates.push(arrGeo);
-
-                    console.log(myCoordinates);
 
                     li.textContent = resultListValue;
                     fragment.appendChild(li);
                 }
             }
             outputAdressList.appendChild(fragment);
-
         })
         .catch(error => console.log("error", error));
 }
 
+function updateValue(e) {
+    valueAdress = e.target.value;
+    mapAdress();
+}
+
+adressInput.addEventListener('input', updateValue);
+
+let liIdDown;
+
+// Вставляет адрес в инпут
 const outputAdressItems = document.querySelector('.form__contacts-sublist');
 
 function toggleDone(event) {
     const adressNode = document.querySelector('.form__input-address');
     const liValue = event.target.textContent;
     adressNode.value = liValue;
-
     outputAdressItems.style.display = 'none';
+
+    // Вставить координаты в карту
+    liIdDown = event.target.id;
+    console.log(liIdDown);
+    console.log(arrGeo);
+    let geoLon = arrGeo[liIdDown];
+    let geoLat = arrGeo[liIdDown + 1];
+    console.log(geoLon);
+    console.log(geoLat);
+
 }
 
 outputAdressItems.addEventListener('click', toggleDone)
 
 
-function updateValue(e) {
-    valueAdress = e.target.value;
-    mapAdress();
-}
 
 // Яндекс.Карты
 var myMap;
