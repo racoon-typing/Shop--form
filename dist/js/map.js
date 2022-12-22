@@ -84,8 +84,8 @@ adressInput.addEventListener('input', updateValue);
 
 
 // Яндекс.Карты
-let geoLon = 37.64;
-let geoLat = 55.76;
+let geoLon = 30.428661; 
+let geoLat = 60.033113;
 
 var myMap;
 
@@ -99,7 +99,7 @@ function init() {
         // При инициализации карты обязательно нужно указать
         // её центр и коэффициент масштабирования.
         center: [geoLat, geoLon], // Москва
-        zoom: 10
+        zoom: 12
     });
 
     myGeoObject = new ymaps.GeoObject(
