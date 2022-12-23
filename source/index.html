@@ -287,7 +287,7 @@
 
                     <!-- 3 -->
                     <li class="product__item">
-                        <img class="product__item-photo" src="@img/content-photo/content-1.jpg" alt="" width="90"
+                        <img class="product__item-photo" src="@img/content-photo/content-2.jpg" alt="" width="90"
                             height="111">
 
                         <h3 class="product__item-title">
@@ -328,11 +328,11 @@
                                         XS
                                     </li>
                                     <!-- 2 -->
-                                    <li class="product__item-size-subitem">
+                                    <li class="product__item-size-subitem product__item-size-subitem--current">
                                         S
                                     </li>
                                     <!-- 3 -->
-                                    <li class="product__item-size-subitem product__item-size-subitem--current">
+                                    <li class="product__item-size-subitem">
                                         M
                                     </li>
                                     <!-- 4 -->
@@ -354,13 +354,13 @@
                                         <span></span>
                                     </li>
                                     <!-- 2 -->
-                                    <li class="product__item-color-item product__item-color-item-2">
+                                    <!-- <li class="product__item-color-item product__item-color-item-2">
                                         <span></span>
-                                    </li>
+                                    </li> -->
                                     <!-- 3 -->
-                                    <li class="product__item-color-item product__item-color-item-3">
+                                    <!-- <li class="product__item-color-item product__item-color-item-3">
                                         <span></span>
-                                    </li>
+                                    </li> -->
                                 </ul>
                             </div>
                         </div>
@@ -438,9 +438,11 @@
 
                             <!-- 5 -->
                             <li class="form__contacts-item form__contacts-item--5">
+                                <textarea class="form__input form__input-address" name="" id="" required>г. Санкт-Петербург, пр. Просвещения, д. 99, кв. 152</textarea>
+
                                 <!-- Адрес -->
-                                <input class="form__input form__input-address" type="text" placeholder="Адрес"
-                                    value="г. Санкт-Петербург, пр. Просвещения, д. 99, кв. 152" required>
+                                <!-- <input class="form__input form__input-address" type="text" placeholder="Адрес"
+                                    value="г. Санкт-Петербург, пр. Просвещения, д. 99, кв. 152" required> -->
 
                                 <svg class="form__input-search" width="16" height="16">
                                     <use xlink:href="../img/icons/icons.svg#search"></use>
@@ -497,7 +499,7 @@
                             Комментарий к заказу
                         </h2>
 
-                        <textarea class="form__comment-textarea" name="" id="" cols="30" rows="10"></textarea>
+                        <textarea class="form__comment-textarea" name="" id="" cols="30" rows="10" placeholder="Комментарий к заказу"></textarea>
 
                         <p class="form__comment-description">
                             Использовано 0/142 символов
@@ -609,7 +611,10 @@
                             </button>
 
                             <h3 class="form__calculate-button-politics">
-                                Нажимая кнопку “Оформить заказ”, Вы соглашаетесь с политикой конфиденциальности.
+                                Нажимая кнопку “Оформить заказ”, Вы соглашаетесь 
+                                <a class="form__calculate-button-politics--link" href="">
+                                    с политикой конфиденциальности.
+                                </a>
                             </h3>
                         </div>
                     </div>

@@ -34,8 +34,8 @@
                 &::before {
                     content: 'Имя';
                     position: absolute;
-                    top: -10px;
-                    left: 16px;
+                    top: -12px;
+                    left: 12px;
                     width: 32px;
                     height: 19px;
                     box-sizing: border-box;
@@ -54,8 +54,8 @@
                 &::before {
                     content: 'Адрес доставки';
                     position: absolute;
-                    top: -10px;
-                    left: 16px;
+                    top: -12px;
+                    left: 12px;
                     width: 99px;
                     height: 19px;
                     box-sizing: border-box;
@@ -69,10 +69,10 @@
                     z-index: 1;
                 }
 
-                & input {
+                & textarea {
                     min-height: 66px;
                     position: relative;
-                    padding: 12px 42px 12px 16px;
+                    padding: 12px 42px 10px 16px;
 
                     &:valid {
                         border: 1px solid @color-grey1;
@@ -125,6 +125,7 @@
     }
 
     &__input {
+        font-family: 'Helvetica';
         display: block;
         box-sizing: border-box;
         padding: 11px 16px;
@@ -245,13 +246,17 @@
         }
 
         &-textarea {
+            font-family: 'Helvetica';
             display: block;
             width: 100%;
             height: 121px;
             box-sizing: border-box;
             border: 1px solid @color-grey2;
-            padding: 12px 16px;
-            margin-bottom: 4px;
+            padding: 15px 16px;
+            margin-bottom: 7px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 21px;
         }
 
         &-description {
@@ -270,6 +275,7 @@
             box-sizing: border-box;
             width: 100%;
             padding: 24px 16px;
+            padding-top: 22px;
             border: 1px solid @color-grey1;
         }
 
@@ -321,6 +327,10 @@
             grid-template-columns: 1fr 1fr;
             margin-bottom: 8px;
 
+            &:last-child {
+                margin-bottom: 0;
+            }
+
             &-smalltext {
                 font-weight: 400;
                 font-size: 12px;
@@ -328,6 +338,9 @@
                 color: @color-second;
 
                 &--second {
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 15px;
                     color: @color-error;
                     text-align: right;
                 }
@@ -345,6 +358,7 @@
             &-wrapper {
                 display: flex;
                 justify-content: space-between;
+                margin-bottom: 9px;
             }
 
             &-title {
@@ -374,22 +388,30 @@
             &-title {
                 margin: 0;
                 margin-right: 5px;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 24px;
             }
 
             &-number {
                 font-weight: 700;
                 margin: 0;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 24px;
             }
         }
 
         // Промокод
         &-promoCode {
             display: flex;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
 
             &-input {
+                font-family: 'Helvetica';
                 box-sizing: border-box;
-                padding: 12px 16px;
+                padding: 12px 13px;
+                padding-top: 8px;
                 width: 100%;
                 height: 45px;
                 font-weight: 400;
@@ -429,6 +451,11 @@
                 line-height: 18px;
                 text-align: center;
                 color: @color-grey1;
+
+                &--link {
+                    display: inline;
+                    color: @color-grey1; 
+                }
             }
         }
 
@@ -437,6 +464,7 @@
             display: inline-block;
             width: 34px;
             height: 14px;
+            margin-top: 8px;
 
             & input {
                 display: none;
@@ -498,7 +526,7 @@
         &__calculate-wrapper {
             width: 400px;
             position: absolute;
-            top: 50px;
+            top: 100px;
             right: 0;
         }
 

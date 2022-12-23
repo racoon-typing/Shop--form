@@ -125,7 +125,7 @@
     content: '8';
     width: 15px;
     height: 15px;
-    top: -4px;
+    top: -3px;
     right: -7px;
     font-size: 10px;
     line-height: 13px;
@@ -144,7 +144,7 @@
     content: '4';
     width: 15px;
     height: 15px;
-    top: -4px;
+    top: -5px;
     right: -7px;
     font-size: 10px;
     line-height: 13px;
@@ -200,7 +200,7 @@
     grid-template-columns: 800px 1fr;
     max-width: 1200px;
     padding: 0;
-    padding-top: 50px;
+    padding-top: 44px;
     padding-bottom: 73px;
   }
   .main-container__title {
@@ -361,7 +361,7 @@
 }
 @media (min-width: 1200px) {
   .breadcrumbs {
-    margin-bottom: 40px;
+    margin-bottom: 43px;
   }
   .breadcrumbs__link {
     font-size: 12px;
@@ -689,8 +689,8 @@
 .form__contacts-item--1::before {
   content: 'Имя';
   position: absolute;
-  top: -10px;
-  left: 16px;
+  top: -12px;
+  left: 12px;
   width: 32px;
   height: 19px;
   box-sizing: border-box;
@@ -706,8 +706,8 @@
 .form__contacts-item--5::before {
   content: 'Адрес доставки';
   position: absolute;
-  top: -10px;
-  left: 16px;
+  top: -12px;
+  left: 12px;
   width: 99px;
   height: 19px;
   box-sizing: border-box;
@@ -720,22 +720,22 @@
   text-align: center;
   z-index: 1;
 }
-.form__contacts-item--5 input {
+.form__contacts-item--5 textarea {
   min-height: 66px;
   position: relative;
-  padding: 12px 42px 12px 16px;
+  padding: 12px 42px 10px 16px;
 }
-.form__contacts-item--5 input:valid {
+.form__contacts-item--5 textarea:valid {
   border: 1px solid #6E6E6E;
   outline: none;
 }
-.form__contacts-item--5 input:invalid {
+.form__contacts-item--5 textarea:invalid {
   border: 1px solid #D92C2C;
 }
-.form__contacts-item--5 input:disabled {
+.form__contacts-item--5 textarea:disabled {
   color: #C8C8C8;
 }
-.form__contacts-item--5 input::before {
+.form__contacts-item--5 textarea::before {
   position: absolute;
   content: url('img/icons/icons.svg#search');
   top: 0;
@@ -765,6 +765,7 @@
   height: 220px;
 }
 .form__input {
+  font-family: 'Helvetica';
   display: block;
   box-sizing: border-box;
   padding: 11px 16px;
@@ -864,13 +865,17 @@
   margin-bottom: 24px;
 }
 .form__comment-textarea {
+  font-family: 'Helvetica';
   display: block;
   width: 100%;
   height: 121px;
   box-sizing: border-box;
   border: 1px solid #C8C8C8;
-  padding: 12px 16px;
-  margin-bottom: 4px;
+  padding: 15px 16px;
+  margin-bottom: 7px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
 }
 .form__comment-description {
   margin: 0;
@@ -884,6 +889,7 @@
   box-sizing: border-box;
   width: 100%;
   padding: 24px 16px;
+  padding-top: 22px;
   border: 1px solid #6E6E6E;
 }
 .form__calculate-list {
@@ -926,6 +932,9 @@
   grid-template-columns: 1fr 1fr;
   margin-bottom: 8px;
 }
+.form__calculate-subitem:last-child {
+  margin-bottom: 0;
+}
 .form__calculate-subitem-smalltext {
   font-weight: 400;
   font-size: 12px;
@@ -933,6 +942,9 @@
   color: #000000;
 }
 .form__calculate-subitem-smalltext--second {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
   color: #D92C2C;
   text-align: right;
 }
@@ -946,6 +958,7 @@
 .form__calculate-delivery-wrapper {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 9px;
 }
 .form__calculate-delivery-title {
   margin: 0;
@@ -970,18 +983,25 @@
 .form__calculate-price-title {
   margin: 0;
   margin-right: 5px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
 }
 .form__calculate-price-number {
-  font-weight: 700;
   margin: 0;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
 }
 .form__calculate-promoCode {
   display: flex;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 .form__calculate-promoCode-input {
+  font-family: 'Helvetica';
   box-sizing: border-box;
-  padding: 12px 16px;
+  padding: 12px 13px;
+  padding-top: 8px;
   width: 100%;
   height: 45px;
   font-weight: 400;
@@ -1017,11 +1037,16 @@
   text-align: center;
   color: #6E6E6E;
 }
+.form__calculate-button-politics--link {
+  display: inline;
+  color: #6E6E6E;
+}
 .form__calculate-switch {
   position: relative;
   display: inline-block;
   width: 34px;
   height: 14px;
+  margin-top: 8px;
 }
 .form__calculate-switch input {
   display: none;
@@ -1073,7 +1098,7 @@
   .form__calculate-wrapper {
     width: 400px;
     position: absolute;
-    top: 50px;
+    top: 100px;
     right: 0;
   }
   .form__contacts-list {

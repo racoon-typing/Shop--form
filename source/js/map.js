@@ -84,7 +84,7 @@ adressInput.addEventListener('input', updateValue);
 
 
 // Яндекс.Карты
-let geoLon = 30.428661; 
+let geoLon = 30.428661;
 let geoLat = 60.033113;
 
 var myMap;
@@ -117,6 +117,26 @@ function init() {
             draggable: true
         },
     );
+
+    // Стиль метки
+    // // Установка для карты ее центра и масштаба
+    // map.setCenter(new YMaps.GeoPoint(37.64, 55.76), 10);
+
+    // // Создает стиль
+    // var s = new YMaps.Style();
+
+    // // Создает стиль значка метки
+    // s.iconStyle = new YMaps.IconStyle();
+    
+    // // Настройки значка
+    // s.iconStyle.href = "@img/icon/map-marker.svg";
+    // s.iconStyle.size = new YMaps.Point(18, 29);
+    // s.iconStyle.offset = new YMaps.Point(-9, -29);
+
+
+    // // Создание метки и добавление ее на карту
+    // var placemark = new YMaps.Placemark(map.getCenter(), {style: s});
+    // map.addOverlay(placemark);
 
     myMap.geoObjects
         .add(myGeoObject)
