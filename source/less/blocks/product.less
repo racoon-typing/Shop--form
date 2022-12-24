@@ -175,6 +175,7 @@
                 width: 20px;
                 height: 20px;
                 margin-right: 16px;
+                margin-right: 5px;
 
                 &:last-child {
                     margin-right: 0;
@@ -278,7 +279,8 @@
         padding-right: 40px;
 
         &__output-price {
-            margin-bottom: 30px;
+            font-size: 28px;
+            margin-bottom: 25px;
 
             & br {
                 display: none;
@@ -287,11 +289,13 @@
 
         &__item {
             display: grid;
-            grid-template-columns: 150px 197px 371px;
+            grid-template-columns: 150px auto auto;
             padding: 25px 0;
+            padding-right: 32px;
 
             &--delete {
                 display: block;
+                padding-right: 0;
             }
 
             &-wrapper--delete {
@@ -327,6 +331,7 @@
                 font-size: 20px;
                 line-height: 24px;
                 margin-bottom: 15px;
+                padding-right: 0;
             }
 
             &-characteristics {
@@ -356,8 +361,16 @@
             &-price {
                 grid-row: 1 / 2;
                 grid-column: 3 / 4;
-                align-items: flex-start;
+                align-items: center;
                 justify-content: space-between;
+                height: 42px;
+                margin-left: 10px;
+
+                &-columnCenter {
+                    width: 153px;
+                    height: 100%;
+                    margin: 0 30px;
+                }
 
                 &-columnLeft {
                     &-num {
