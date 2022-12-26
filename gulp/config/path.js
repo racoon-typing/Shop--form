@@ -31,5 +31,5 @@ export const path = {
     buildFolder: buildFolder,
     srcFolder: srcFolder,
     rootFolder: rootFolder,
-    ftp: 'shop--form/publick_html'
+    ftp: 'test-5-corners/public_html'
 }
