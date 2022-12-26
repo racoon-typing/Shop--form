@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let formData = new FormData(form);
         
         if (error === 0) {
-            form.classList.add('form_sending')
+            form.classList.add('_sending')
 
             let response = await fetch('sendmail.php', {
                 method: 'POST',
@@ -24,10 +24,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 let result = await response.json();
                 alert(result.message);
                 form.reset();
-                form.classList.remove('form_sending')
+                form.classList.remove('_sending')
             } else {
                 alert('Ошибка');
-                form.classList.remove('form_sending')
+                form.classList.remove('_sending')
             }            
         } 
     }
