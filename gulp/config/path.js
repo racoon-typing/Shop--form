@@ -6,20 +6,20 @@ const srcFolder = './source';
 
 export const path = {
     build: {
+        files: `${buildFolder}/`,
         css: `${buildFolder}/css/`,
         html: `${buildFolder}/`,
         img: `${buildFolder}/img/`,
         js: `${buildFolder}/`,
-        video: `${buildFolder}/video`,
     },
     src: {
+        files: `${srcFolder}/files/**/*.*`,
         less: `${srcFolder}/less/style.less`,
         html: `${srcFolder}/*.html`,
         img: `${srcFolder}/img/**/*.{jpg,jpeg,png,webp}`,
         svg: `${srcFolder}/img/**/*.svg`,
         svgicons: `${srcFolder}/svgicons/*.svg`,
         js: `${srcFolder}/**/*.js`,
-        video: `${srcFolder}/video/*.mp4`,
     },
     watch: {
         html: `${srcFolder}/*.html`,
