@@ -8,13 +8,31 @@ document.addEventListener('DOMContentLoaded', function() {
     async function formSend(e) {
         e.preventDefault();
 
+        // Возвращает результат: кол-во ошибок 
         let error = formValidate(form);
 
+        let formData = new FormData(form);
+        
         if (error === 0) {
+            form.classList.add('form_sending')
 
-        } else {
+            // let response = await fetch('sendmail.php', {
+            //     method: 'POST',
+            //     body: formData
+            // });
+            // if(response.ok) {
+            //     let result = await response.json();
+            //     alert(result.message);
+            //     form.reset();
+            //     form.classList.remove('form_sending')
+            // } else {
+            //     alert('Ошибка');
+            //     form.classList.remove('form_sending')
+            // }
+
             
-        }
+            console.log(formData);
+        } 
     }
 
     // Валидация формы
@@ -24,7 +42,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         for (let i = 0; i < formReq.length; i++) {
             const input = formReq[i];
-            console.log(input);
 
             formRemoveError(input);
 
