@@ -16,22 +16,19 @@ document.addEventListener('DOMContentLoaded', function() {
         if (error === 0) {
             form.classList.add('form_sending')
 
-            // let response = await fetch('sendmail.php', {
-            //     method: 'POST',
-            //     body: formData
-            // });
-            // if(response.ok) {
-            //     let result = await response.json();
-            //     alert(result.message);
-            //     form.reset();
-            //     form.classList.remove('form_sending')
-            // } else {
-            //     alert('Ошибка');
-            //     form.classList.remove('form_sending')
-            // }
-
-            
-            console.log(formData);
+            let response = await fetch('sendmail.php', {
+                method: 'POST',
+                body: formData
+            });
+            if(response.ok) {
+                let result = await response.json();
+                alert(result.message);
+                form.reset();
+                form.classList.remove('form_sending')
+            } else {
+                alert('Ошибка');
+                form.classList.remove('form_sending')
+            }            
         } 
     }
 
