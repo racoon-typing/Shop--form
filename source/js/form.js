@@ -1,5 +1,3 @@
-"use strict"
-
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('form');
 
@@ -11,7 +9,8 @@ document.addEventListener('DOMContentLoaded', function() {
         let error = formValidate(form);
     }
 
-    function formValidate(from) {
+    function formValidate(form) {
+
         let error = 0;
         let formReq = document.querySelectorAll('._req');
 
