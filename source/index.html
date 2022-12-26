@@ -370,8 +370,6 @@
                             </div>
                         </div>
 
-
-
                         <div class="product__item-price">
                             <div class="product__item-price-columnLeft">
                                 <p class="product__item-price-columnLeft-num">
@@ -409,8 +407,9 @@
                 </ul>
             </section>
 
+            <!-- Форма -->
             <section class="form">
-                <div class="form__wrapper">
+                <form action="#" id="form" class="form__wrapper">
                     <h2 class="form__title">
                         Контактные данные
                     </h2>
@@ -420,38 +419,35 @@
                         <ul class="form__contacts-list">
                             <!-- 1 -->
                             <li class="form__contacts-item form__contacts-item--1">
-                                <!-- Имя -->
-                                <input class="form__input form__input-name" type="text" placeholder="Имя"
+                                <!-- ПОЛЕ: Имя -->
+                                <input class="form__input form__input-name _req" type="text" name="name" placeholder="Имя"
                                     value="Александр" required>
                             </li>
 
                             <!-- 2 -->
                             <li class="form__contacts-item form__contacts-item--2">
-                                <!-- Фамилия -->
-                                <input class="form__input form__input-surname" type="text" placeholder="Фамилия"
+                                <!-- ПОЛЕ: Фамилия -->
+                                <input class="form__input form__input-surname _req" type="text" name="surname" placeholder="Фамилия"
                                     required>
                             </li>
 
                             <!-- 3 -->
                             <li class="form__contacts-item form__contacts-item--3">
-                                <!-- Телефон -->
-                                <input class="form__input form__input-tel" type="tel" placeholder="Телефон" required>
+                                <!-- ПОЛЕ: Телефон -->
+                                <input class="form__input form__input-tel _req" type="tel" name="tel" placeholder="Телефон" required>
                             </li>
 
                             <!-- 4 -->
                             <li class="form__contacts-item form__contacts-item--4">
-                                <!-- Почта -->
-                                <input class="form__input form__input-email" type="email" placeholder="Email" required>
+                                <!-- ПОЛЕ: Почта -->
+                                <input class="form__input form__input-email _req _e-mail" type="email" name="e-mail" placeholder="Email" required>
                             </li>
 
                             <!-- 5 -->
                             <li class="form__contacts-item form__contacts-item--5">
-                                <textarea class="form__input form__input-address" name="" id=""
+                                <!-- ПОЛЕ: Адрес -->
+                                <textarea class="form__input form__input-address _req" name="adress" name="adress"
                                     required>г. Санкт-Петербург, пр. Просвещения, д. 99, кв. 152</textarea>
-
-                                <!-- Адрес -->
-                                <!-- <input class="form__input form__input-address" type="text" placeholder="Адрес"
-                                    value="г. Санкт-Петербург, пр. Просвещения, д. 99, кв. 152" required> -->
 
                                 <svg class="form__input-search" width="16" height="16">
                                     <use xlink:href="../img/icons/icons.svg#search"></use>
@@ -614,7 +610,7 @@
                         </div>
 
                         <div class="form__calculate-button-wrapper">
-                            <button class="form__calculate-button">
+                            <button type="submit" class="form__calculate-button">
                                 <span>
                                     Оформить заказ
                                 </span>
@@ -628,7 +624,7 @@
                             </h3>
                         </div>
                     </div>
-                </div>
+                </form>
             </section>
         </div>
     </main>
@@ -640,7 +636,7 @@
             </h2>
 
             <div class="main-footer__wrapper-column">
-                <form action="" class="main-footer__form">
+                <form action="#" class="main-footer__form">
                     <h3 class="main-footer__form-title">
                         Скидка 10% за подписку
                         на наши новости
@@ -764,6 +760,7 @@
     <!-- Скрипт -->
     <script src="js/index.js"></script>
     <script src="js/map.js"></script>
+    <script src="js/form.js"></script>
 </body>
 
 </html>

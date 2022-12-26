@@ -1164,6 +1164,9 @@
     top: 17px;
     right: 24px;
   }
+  .form__input._error {
+    border: 1px solid #D92C2C;
+  }
   .form__pay-wrapper {
     margin-bottom: 44px;
   }
