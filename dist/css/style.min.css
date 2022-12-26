@@ -816,8 +816,8 @@
   right: 16px;
   color: #6E6E6E;
 }
-.form__input:disabled {
-  color: #C8C8C8;
+.form__input_error {
+  border: 1px solid #D92C2C;
 }
 .form__input:focus {
   border: 1px solid #6E6E6E;
@@ -1163,9 +1163,6 @@
     height: 20px;
     top: 17px;
     right: 24px;
-  }
-  .form__input._error {
-    border: 1px solid #D92C2C;
   }
   .form__pay-wrapper {
     margin-bottom: 44px;

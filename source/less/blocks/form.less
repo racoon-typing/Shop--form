@@ -154,8 +154,8 @@
             color: @color-grey1;
         }
 
-        &:disabled {
-            color: @color-grey2;
+        &_error {
+            border: 1px solid @color-error;
         }
 
         &:focus {
@@ -576,11 +576,7 @@
                 height: 20px;
                 top: 17px;
                 right: 24px;
-            }
-        }
-
-        &__input._error {
-            border: 1px solid @color-error;
+            }    
         }
 
         // Оплата
