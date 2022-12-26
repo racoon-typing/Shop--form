@@ -1,7 +1,5 @@
 "use strict"
 
-const makeTitle = require("gulp-cli/lib/shared/make-title");
-
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('form');
 
@@ -9,8 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     async function formSend(e) {
         e.preventDefault();
-
-        console.log('Клик на кнопку');
 
         let error = formValidate(form);
     }
