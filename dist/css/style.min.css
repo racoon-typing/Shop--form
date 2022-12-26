@@ -202,7 +202,7 @@
     max-width: 1200px;
     padding: 0;
     padding-top: 44px;
-    padding-bottom: 73px;
+    padding-bottom: 70px;
   }
   .main-container__title {
     margin-bottom: 0;
@@ -1118,7 +1118,7 @@
   .form__title {
     font-size: 28px;
     line-height: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 28px;
   }
   .form__calculate-wrapper {
     width: 400px;
@@ -1138,8 +1138,12 @@
   .form__contacts-item--5 {
     grid-column: 1 / 3;
   }
-  .form__contacts-item--5 input {
+  .form__contacts-item--5::before {
+    left: 16px;
+  }
+  .form__contacts-item--5 textarea {
     min-height: 51px;
+    height: 51px;
     font-size: 16px;
     line-height: 21px;
     padding: 15px 50px 15px 20px;
@@ -1160,13 +1164,24 @@
     top: 17px;
     right: 24px;
   }
+  .form__pay-wrapper {
+    margin-bottom: 44px;
+  }
+  .form__pay-title {
+    font-size: 28px;
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
+  .form__pay-item {
+    margin-bottom: 21px;
+  }
   .form__comment-wrapper {
     margin-bottom: 0;
   }
   .form__comment-title {
     font-size: 28px;
     line-height: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 26px;
   }
   .form__comment-textarea {
     min-height: 141px;
@@ -1177,9 +1192,10 @@
   }
   .form__calculate-wrapper {
     padding: 30px 20px;
+    padding-top: 32px;
   }
   .form__calculate-list {
-    margin-bottom: 20px;
+    margin-bottom: 17px;
   }
   .form__calculate-item {
     margin-bottom: 20px;
@@ -1200,19 +1216,25 @@
     line-height: 21px;
   }
   .form__calculate-delivery {
-    padding: 20px 0;
+    padding: 15px 0;
   }
   .form__calculate-delivery-wrapper {
+    margin: 0;
     display: flex;
-    min-height: 31px;
+    min-height: 39px;
     align-items: center;
   }
   .form__calculate-delivery-title {
     font-size: 20px;
     line-height: 24px;
   }
+  .form__calculate-switch {
+    margin-top: 3px;
+  }
   .form__calculate-price {
     padding: 20px 0;
+    padding-top: 23px;
+    padding-bottom: 18px;
   }
   .form__calculate-price-title {
     font-size: 28px;
@@ -1222,9 +1244,17 @@
     font-size: 28px;
     line-height: 30px;
   }
+  .form__calculate-promoCode {
+    margin-bottom: 20px;
+  }
   .form__calculate-promoCode-input {
+    height: 51px;
     font-size: 16px;
     line-height: 21px;
-    padding: 12px 16px;
+    padding: 12px 17px;
+    border: 1px solid #C8C8C8;
+  }
+  .form__calculate-button-politics {
+    letter-spacing: -0.1px;
   }
 }
