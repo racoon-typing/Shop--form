@@ -1,77 +1,27 @@
-"use strict";
+// InputMask
+const form = document.getElementById('form');
+const telNode = form.querySelector('input[type="tel"]');
+const inputMask = new Inputmask('+7 (999) 999-99-99');
+inputMask.mask(telNode);
 
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('form');
+// Валидация
+new window.JustValidate('.form', {
+    rules: {
+        // name: {
 
-    form.addEventListener('submit', formSend)
+        // },
+        // email: {
 
-    async function formSend(e) {
-        e.preventDefault();
-
-        // Возвращает результат: кол-во ошибок 
-        let error = formValidate(form);
-
-        let formData = new FormData(form);
-        
-        if (error === 0) {
-            form.classList.add('_sending')
-
-            let response = await fetch('sendmail.php', {
-                method: 'POST',
-                body: formData
-            });
-            if(response.ok) {
-                let result = await response.json();
-                alert(result.message);
-                form.reset();
-                form.classList.remove('_sending')
-            } else {
-                alert('Ошибка');
-                form.classList.remove('_sending')
-            }            
-        } 
-    }
-
-    // Валидация формы
-    function formValidate(form) {
-        let error = 0;
-        let formReq = document.querySelectorAll('._req');
-
-        for (let i = 0; i < formReq.length; i++) {
-            const input = formReq[i];
-
-            formRemoveError(input);
-
-            if (input.classList.contains('_e-mail')) {
-                if (emailTest(input)) {
-                    formAddError(input);
-                    error++;
-                }
-            } else {
-                if(input.value === '') {
-                    formAddError(input);
-                    error++;
-                }
+        // },
+        tel: {
+            required: true,
+            function: () => {
+                const phone = telNode.inputmask.unmaskedvalue();
+                return Number(phone) && phone.length === 10;
             }
         }
+    },
+    submitHandler: function(thisForm) {
 
-        return error;
     }
-
-    // Добавляет класс Ошибки
-    function formAddError(input) {
-        // input.parentElement.classList.add('form__input_error');
-        input.classList.add('form__input_error');
-    }
-
-    // Убирает класс Ошибки
-    function formRemoveError(input) {
-        // input.parentElement.classList.remove('form__input_error');
-        input.classList.remove('form__input_error');
-    }
-
-    // Функция теста e-mail
-    function emailTest(input) {
-        return !/^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/.test(input.value);
-    }
-});
+})
