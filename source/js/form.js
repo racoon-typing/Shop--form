@@ -9,7 +9,9 @@ inputMask.mask(telNode);
 new window.JustValidate('.form', {
     rules: {
         surname: {
-            required: true,   
+            required: true, 
+            minLength: 3,
+            maxLength: 15,  
         },
         phone: {
             required: true,
@@ -30,7 +32,8 @@ new window.JustValidate('.form', {
         },
         surname: {
             required: 'Введите фамилию',
-            minLength: 'Фамилия должно быть больше 5 букв'
+            minLength: 'Фамилия должна быть больше 3 букв',
+            maxLength: 'Запрещено вводить более 15 символов',
         },
         phone: {
             required: 'Введите телефон',
