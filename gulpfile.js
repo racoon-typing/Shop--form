@@ -12,12 +12,13 @@ global.app = {
 
 // Импорт задач
 import { reset } from "./gulp/tasks/reset.js";
-import { copyPHP } from './gulp/tasks/copy.js';
+import { copy } from './gulp/tasks/copy.js';
 import { html } from "./gulp/tasks/html.js";
 import { server } from "./gulp/tasks/server.js";
 import { styles } from './gulp/tasks/less.js';
 import { img } from './gulp/tasks/img.js';
 import { js } from './gulp/tasks/js.js';
+import { php } from './gulp/tasks/php.js';
 import { zip } from './gulp/tasks/zip.js';
 import { ftp } from './gulp/tasks/ftp.js';
 import { svgSprive } from './gulp/tasks/svgSprite.js';
@@ -33,7 +34,7 @@ function watcher() {
 
 export { svgSprive }
 
-const mainTasks = gulp.parallel(html, styles, svgSprive, img, js, copyPHP);
+const mainTasks = gulp.parallel(html, styles, svgSprive, img, js, copy, php);
 
 // Сценарий выполнения
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
