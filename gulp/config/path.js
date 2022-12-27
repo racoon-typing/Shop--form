@@ -6,7 +6,7 @@ const srcFolder = './source';
 
 export const path = {
     build: {
-        files: `${buildFolder}/`,
+        files: `${buildFolder}/files`,
         css: `${buildFolder}/css/`,
         html: `${buildFolder}/`,
         img: `${buildFolder}/img/`,
