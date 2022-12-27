@@ -11,7 +11,7 @@
     $mail->IsHTML(true);
 
     // От кого письмо
-    $mail->setFrom('info@fls.guru', 'Даниил Prog');
+    $mail->setFrom('eo18622@yandex.ru', 'Даниил Prog');
     // Кому отправить
     $mail->addAdress('eo18622@yandex.ru');
     // Тема письма
