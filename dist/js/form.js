@@ -57,7 +57,7 @@ new window.JustValidate('.form', {
             if (xhr.readyState === 4) {
                 if (xhr.status === 200) {
                     console.log('Отправлено');
-                    thisForm.reset();
+                    form.reset();
                 }
             }
         }
