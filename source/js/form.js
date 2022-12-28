@@ -48,20 +48,20 @@ new window.JustValidate('.form', {
         }, 
         adress: 'Введите адрес',
     },
-    submitHandler: function (form, values, ajax) {
-        ajax({
-            url: 'https://just-validate-api.herokuapp.com/submit',
-            method: 'POST',
-            data: values,
-            async: true,
-            callback: function (response) {
-                alert('AJAX submit successful! \nResponse from server:' + response)
-            },
-            error: function (response) {
-                alert('AJAX submit error! \nResponse from server:' + response)
-            }
-        });
-    },
+    // submitHandler: function (form, values, ajax) {
+    //     ajax({
+    //         url: 'https://just-validate-api.herokuapp.com/submit',
+    //         method: 'POST',
+    //         data: values,
+    //         async: true,
+    //         callback: function (response) {
+    //             alert('AJAX submit successful! \nResponse from server:' + response)
+    //         },
+    //         error: function (response) {
+    //             alert('AJAX submit error! \nResponse from server:' + response)
+    //         }
+    //     });
+    // },
     // submitHandler: function(form) {
     //     let formData = new FormData(form);
 

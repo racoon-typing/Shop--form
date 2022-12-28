@@ -34,5 +34,5 @@ export const path = {
     buildFolder: buildFolder,
     srcFolder: srcFolder,
     rootFolder: rootFolder,
-    ftp: 'test-5-corners/public_html'
+    ftp: 'test-5-corners/'
 }
