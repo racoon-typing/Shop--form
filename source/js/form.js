@@ -48,21 +48,35 @@ new window.JustValidate('.form', {
         }, 
         adress: 'Введите адрес',
     },
-    submitHandler: function(form) {
-        let formData = new FormData(form);
-
-        let xhr = new XMLHttpRequest();
-        
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState === 4) {
-                if (xhr.status === 200) {
-                    console.log('Отправлено');
-                    form.reset();
-                }
+    submitHandler: function (form, values, ajax) {
+        ajax({
+            url: 'https://just-validate-api.herokuapp.com/submit',
+            method: 'POST',
+            data: values,
+            async: true,
+            callback: function (response) {
+                alert('AJAX submit successful! \nResponse from server:' + response)
+            },
+            error: function (response) {
+                alert('AJAX submit error! \nResponse from server:' + response)
             }
-        }
+        });
+    },
+    // submitHandler: function(form) {
+    //     let formData = new FormData(form);
 
-        xhr.open('POST', 'mail.php', true);
-        xhr.send(formData);
-    } 
+    //     let xhr = new XMLHttpRequest();
+        
+    //     xhr.onreadystatechange = function () {
+    //         if (xhr.readyState === 4) {
+    //             if (xhr.status === 200) {
+    //                 console.log('Отправлено');
+    //                 form.reset();
+    //             }
+    //         }
+    //     }
+
+    //     xhr.open('POST', 'mail.php', true);
+    //     xhr.send(formData);
+    // } 
 })
