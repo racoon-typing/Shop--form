@@ -48,8 +48,8 @@ new window.JustValidate('.form', {
         }, 
         adress: 'Введите адрес',
     },
-    submitHandler: function(thisForm) {
-        let formData = new FormData(thisForm);
+    submitHandler: function(form) {
+        let formData = new FormData(form);
 
         let xhr = new XMLHttpRequest();
         
