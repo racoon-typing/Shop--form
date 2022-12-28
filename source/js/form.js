@@ -22,7 +22,10 @@ new window.JustValidate('.form', {
         },
         adress: {
             required: true,
-        }
+        },
+        radio: {
+            required: true,
+        },
     },
     messages: {
         name: {
@@ -46,6 +49,20 @@ new window.JustValidate('.form', {
         adress: 'Введите адрес',
     },
     submitHandler: function(thisForm) {
+        let formData = new FormData(thisForm);
 
-    }
+        let xhr = new XMLHttpRequest();
+        
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    console.log('Отправлено');
+                    thisForm.reset();
+                }
+            }
+        }
+
+        xhr.open('POST', 'mail.php', true);
+        xhr.send(formData);
+    } 
 })

@@ -474,10 +474,11 @@
                             Оплата
                         </h3>
 
+                        <!-- Группа радиокнопок -->
                         <ul class="form__pay-list">
                             <!-- 1 -->
                             <li class="form__pay-item">
-                                <input class="form__pay-item-radio" type="radio" id="cash" name="pay" value="cash"
+                                <input class="form__pay-item-radio" type="radio" id="cash" data-validate-field="radio" name="pay" value="cash"
                                     checked>
                                 <label class="form__pay-item-label" for="cash">
                                     Наличными курьеру
@@ -486,7 +487,7 @@
 
                             <!-- 2 -->
                             <li class="form__pay-item">
-                                <input class="form__pay-item-radio" type="radio" id="card" name="pay" value="cash">
+                                <input class="form__pay-item-radio" type="radio" id="card" data-validate-field="radio" name="pay" value="card">
                                 <label class="form__pay-item-label" for="card">
                                     Картой курьеру
                                 </label>
@@ -494,7 +495,7 @@
 
                             <!-- 3 -->
                             <li class="form__pay-item">
-                                <input class="form__pay-item-radio" type="radio" id="online" name="pay" value="cash">
+                                <input class="form__pay-item-radio" type="radio" id="online" data-validate-field="radio" name="pay" value="online">
                                 <label class="form__pay-item-label" for="online">
                                     Картой онлайн
                                 </label>
