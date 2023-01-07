@@ -67,8 +67,8 @@ new window.JustValidate('.form', {
     //         }
     //     });
     // },
-    submitHandler: function(thisForm) {
-        let formData = new FormData(thisForm);
+    submitHandler: function(form) {
+        let formData = new FormData(form);
 
         let xhr = new XMLHttpRequest();
         
@@ -83,6 +83,6 @@ new window.JustValidate('.form', {
         xhr.open('POST', 'mail.php', true);
         xhr.send(formData);
 
-        thisForm.reset();
+        form.reset();
     }  
 })
