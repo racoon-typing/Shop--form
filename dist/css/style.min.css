@@ -801,6 +801,9 @@
   line-height: 21px;
   border: 1px solid #C8C8C8;
 }
+.form__input:disabled {
+  color: #C8C8C8;
+}
 .form__input-name {
   position: relative;
 }

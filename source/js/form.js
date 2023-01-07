@@ -26,6 +26,10 @@ new window.JustValidate('.form', {
         radio: {
             required: true,
         },
+        promocode: {
+            required: true,
+            minLength: 1,
+        },
     },
     messages: {
         name: {
@@ -47,6 +51,7 @@ new window.JustValidate('.form', {
             required: 'Введите email',
         }, 
         adress: 'Введите адрес',
+        promocode: 'купон не найден',
     },
     // submitHandler: function (form, values, ajax) {
     //     ajax({
@@ -62,21 +67,22 @@ new window.JustValidate('.form', {
     //         }
     //     });
     // },
-    // submitHandler: function(form) {
-    //     let formData = new FormData(form);
+    submitHandler: function(thisForm) {
+        let formData = new FormData(thisForm);
 
-    //     let xhr = new XMLHttpRequest();
+        let xhr = new XMLHttpRequest();
         
-    //     xhr.onreadystatechange = function () {
-    //         if (xhr.readyState === 4) {
-    //             if (xhr.status === 200) {
-    //                 console.log('Отправлено');
-    //                 form.reset();
-    //             }
-    //         }
-    //     }
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    console.log('Отправлено');
+                }
+            }
+        }
 
-    //     xhr.open('POST', 'mail.php', true);
-    //     xhr.send(formData);
-    // } 
+        xhr.open('POST', 'mail.php', true);
+        xhr.send(formData);
+
+        thisForm.reset();
+    }  
 })

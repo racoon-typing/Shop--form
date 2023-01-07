@@ -26,6 +26,9 @@ new window.JustValidate('.form', {
         radio: {
             required: true,
         },
+        promocode: {
+            minLength: 1,
+        },
     },
     messages: {
         name: {
@@ -47,21 +50,22 @@ new window.JustValidate('.form', {
             required: 'Введите email',
         }, 
         adress: 'Введите адрес',
+        promocode: 'купон не найден',
     },
-    submitHandler: function (form, values, ajax) {
-        ajax({
-            url: 'https://just-validate-api.herokuapp.com/submit',
-            method: 'POST',
-            data: values,
-            async: true,
-            callback: function (response) {
-                alert('AJAX submit successful! \nResponse from server:' + response)
-            },
-            error: function (response) {
-                alert('AJAX submit error! \nResponse from server:' + response)
-            }
-        });
-    },
+    // submitHandler: function (form, values, ajax) {
+    //     ajax({
+    //         url: 'https://just-validate-api.herokuapp.com/submit',
+    //         method: 'POST',
+    //         data: values,
+    //         async: true,
+    //         callback: function (response) {
+    //             alert('AJAX submit successful! \nResponse from server:' + response)
+    //         },
+    //         error: function (response) {
+    //             alert('AJAX submit error! \nResponse from server:' + response)
+    //         }
+    //     });
+    // },
     // submitHandler: function(form) {
     //     let formData = new FormData(form);
 
